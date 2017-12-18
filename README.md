@@ -1,6 +1,7 @@
-# yomi
+# yomi-front
 
-> article manage
+>.ui框架：iview
+>.css预处理：less
 
 ## Build Setup
 
@@ -19,9 +20,6 @@ npm run build --report
 
 # run unit tests
 npm run unit
-
-# run e2e tests
-npm run e2e
 
 # run all tests
 npm test
