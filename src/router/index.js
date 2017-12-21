@@ -9,7 +9,7 @@ Vue.use(VueRouter)
 
 // 路由配置
 const router = new VueRouter({
-  history: true,
+  mode: 'history',
   routes: routers
 })
 

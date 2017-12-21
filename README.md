@@ -2,6 +2,10 @@
 
 >.ui框架：iview
 >.css预处理：less
+>.http请求：axios
+>.路由：vue-Router
+>.状态管理：vuex
+>.cookie处理：js-cookie
 
 ## Build Setup
 
