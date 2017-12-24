@@ -36,6 +36,7 @@
 <script>
 import Cookies from 'js-cookie'
 import Server from '@/server'
+
 export default {
   data () {
     return {
@@ -62,7 +63,6 @@ export default {
     handleSubmit () {
       this.$refs.loginForm.validate((valid) => {
         if (valid) {
-          console.log('hi')
           Server.login(this.form).then((res) => {
             if (res.data.success) {
               this.errorMsg = ''

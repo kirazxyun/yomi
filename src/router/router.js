@@ -1,22 +1,22 @@
+import Login from '@/views/login'
+import Home from '@/components/HelloWorld'
+
 const routers = [
   {
+    path: '/',
+    name: 'home',
+    meta: {
+      title: '首页'
+    },
+    component: Home
+  }, {
     path: '/login',
     name: 'login',
     meta: {
-      title: 'Login - 登录'
+      title: '登录',
+      auth: true
     },
-    component: resolve => {
-      require(['@/views/login.vue'], resolve)
-    }
-  }, {
-    path: '/index',
-    name: 'home_index',
-    meta: {
-      titie: 'home'
-    },
-    component: resolve => {
-      require(['@/components/HelloWorld.vue'], resolve)
-    }
+    component: Login
   }
 ]
 
