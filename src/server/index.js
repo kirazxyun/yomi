@@ -1,12 +1,12 @@
 import axios from 'axios'
 
-// axio默认配置
+// 路径前缀
 axios.defaults.baseURL = process.env.BASE_URL
-axios.defaults.withCredentials = true
 
 // 接口地址
 const API = {
-  login: '/admin/login'
+  login: `/admin/login`,
+  getArticle: `/article/getArticle`
 }
 
 // 登陆
@@ -18,7 +18,16 @@ const login = (params) => new Promise((resolve, reject) => {
   })
 })
 
+const getArticle = (params) => new Promise((resolve, reject) => {
+  axios.get(API.getArticle, params).then(res => {
+    resolve(res)
+  }).catch(err => {
+    reject(err)
+  })
+})
+
 // export
 export default {
-  login
+  login,
+  getArticle
 }
