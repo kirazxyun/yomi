@@ -74,7 +74,7 @@ export default {
                 Cookies.set('access', 1)
               }
               this.$router.push({
-                name: 'home_index'
+                name: 'home'
               })
             } else {
               this.errorMsg = res.data.msg

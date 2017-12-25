@@ -54,7 +54,7 @@ const mainRouter = [
     redirect: '/home',
     component: Main,
     children: [{
-      path: '/home',
+      path: 'home',
       title: '首页',
       name: 'home',
       component: Home
@@ -64,10 +64,10 @@ const mainRouter = [
 
 const routers = [
   loginRouter,
+  ...mainRouter,
   page403,
   page404,
-  page500,
-  ...mainRouter
+  page500
 ]
 
 export default routers
