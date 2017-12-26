@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 // 路径前缀
-axios.defaults.baseURL = process.env.BASE_URL
+axios.defaults.baseURL = 'http://yapi.demo.qunar.com/mock/2800'
 
 // 接口地址
 const API = {
