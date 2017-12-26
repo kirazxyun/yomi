@@ -11,6 +11,9 @@ module.exports = {
   },
   // https://github.com/standard/standard/blob/master/docs/RULES-en.md
   extends: 'standard',
+  globals: {
+    MockAjax: true
+  },
   // required to lint *.vue files
   plugins: [
     'html'
