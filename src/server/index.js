@@ -20,7 +20,7 @@ const login = (params) => new Promise((resolve, reject) => {
 
 const getArticle = (params) => new Promise((resolve, reject) => {
   axios.get(API.getArticle, params).then(res => {
-    resolve(res)
+    resolve(res.data)
   }).catch(err => {
     reject(err)
   })
