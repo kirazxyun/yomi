@@ -1,12 +1,12 @@
 import axios from 'axios'
 
 // 路径前缀
-axios.defaults.baseURL = 'http://yapi.demo.qunar.com/mock/2800'
+axios.defaults.baseURL = process.env.BASE_URL
 
 // 接口地址
 const API = {
   login: `/admin/login`,
-  getArticle: `/article/getArticle`
+  getArticle: `/article`
 }
 
 // 登陆
@@ -19,7 +19,7 @@ const login = (params) => new Promise((resolve, reject) => {
 })
 
 const getArticle = (params) => new Promise((resolve, reject) => {
-  axios.get(API.getArticle, params).then(res => {
+  axios.get(API.getArticle, {params: params}).then(res => {
     resolve(res.data)
   }).catch(err => {
     reject(err)

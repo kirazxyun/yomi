@@ -21,8 +21,12 @@
       return {
         params: {
           all: {},
-          current: {},
-          excellent: {}
+          current: {
+            status: 0
+          },
+          excellent: {
+            status: 2
+          }
         }
       }
     },
