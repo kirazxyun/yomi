@@ -15,11 +15,9 @@
     name: 'articleList',
 
     props: {
-      params: {
-        type: Object,
-        default: function () {
-          return {}
-        }
+      server: {
+        type: String,
+        default: ''
       }
     },
 
@@ -35,7 +33,7 @@
 
     methods: {
       getList () {
-        Server.getArticle(this.params).then((res) => {
+        Server[this.server]().then((res) => {
           if (res.success) {
             this.articles = res.data.rows
           } else {

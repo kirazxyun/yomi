@@ -20,7 +20,7 @@ MockAjax.mock([
           id: faker.random.uuid(),
           username: '我是推荐人',
           title: '我是标题',
-          recommend_name: '为什么为什么不为什么',
+          reason: '为什么为什么不为什么',
           time: new Date(),
           score: 0,
           link: ''

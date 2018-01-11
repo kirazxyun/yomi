@@ -6,7 +6,10 @@ axios.defaults.baseURL = process.env.BASE_URL
 // 接口地址
 const API = {
   login: `/admin/login`,
-  getArticle: `/article`
+  getArticle: `/article`,
+  getArchived: '/article/getArchived',
+  getExcellent: '/article/getExcellent',
+  getVoting: '/article/getVoting'
 }
 
 // 登陆
@@ -26,8 +29,35 @@ const getArticle = (params) => new Promise((resolve, reject) => {
   })
 })
 
+const getArchived = () => new Promise((resolve, reject) => {
+  axios.get(API.getArchived).then(res => {
+    resolve(res.data)
+  }).catch(err => {
+    reject(err)
+  })
+})
+
+const getExcellent = () => new Promise((resolve, reject) => {
+  axios.get(API.getExcellent).then(res => {
+    resolve(res.data)
+  }).catch(err => {
+    reject(err)
+  })
+})
+
+const getVoting = () => new Promise((resolve, reject) => {
+  axios.get(API.getVoting).then(res => {
+    resolve(res.data)
+  }).catch(err => {
+    reject(err)
+  })
+})
+
 // export
 export default {
   login,
-  getArticle
+  getArticle,
+  getArchived,
+  getExcellent,
+  getVoting
 }

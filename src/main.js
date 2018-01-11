@@ -6,7 +6,7 @@ import App from './App'
 import router from './router'
 import 'iview/dist/styles/iview.css'
 import './styles/index.less'
-import './mock'
+// import './mock'
 
 Vue.config.productionTip = false
 Vue.use(iView)

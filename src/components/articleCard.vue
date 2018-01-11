@@ -3,7 +3,7 @@
     <Card :bordered="false">
       <div slot="title">
         <div class="article-item-user">
-          <span class="name">{{ article.recommend_name }}</span>
+          <span class="name">{{ article.username }}</span>
         </div>
         <div class="article-item-info-aside">
           <a target="_blank" class="title tra-color-bg" :href="article.link">{{ article.title }}</a>
@@ -11,7 +11,7 @@
       </div>
       <div class="article-item-recommend">
         <p class="paragraph">
-         {{ article.recommend_reason }}
+         {{ article.reason }}
         </p>
       </div>
       <!-- <div class="article-item-ctrl">

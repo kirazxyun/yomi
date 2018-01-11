@@ -2,13 +2,13 @@
   <div>
     <Tabs value="name1">
         <TabPane label="全部" name="all">
-          <ArticleList :params="params.all"></ArticleList>
+          <ArticleList server="getArchived"></ArticleList>
         </TabPane>
         <TabPane label="当月" name="current">
-          <ArticleList :params="params.current"></ArticleList>
+          <ArticleList server="getExcellent"></ArticleList>
         </TabPane>
         <TabPane label="优秀" name="excellent">
-          <ArticleList :params="params.excellent"></ArticleList>
+          <ArticleList server="getVoting"></ArticleList>
         </TabPane>
     </Tabs>
   </div>
@@ -20,15 +20,6 @@
   export default {
     data () {
       return {
-        params: {
-          all: {},
-          current: {
-            status: 0
-          },
-          excellent: {
-            status: 2
-          }
-        }
       }
     },
     components: {

@@ -9,7 +9,7 @@
                 <div class="form-con">
                     <Form ref="loginForm" :model="form" :rules="rules">
                         <FormItem prop="userName">
-                            <Input v-model="form.userName" placeholder="请输入用户名">
+                            <Input v-model="form.username" placeholder="请输入用户名">
                                 <span slot="prepend">
                                     <Icon :size="16" type="person"></Icon>
                                 </span>
@@ -41,11 +41,11 @@ export default {
   data () {
     return {
       form: {
-        userName: 'admin',
+        username: 'admin',
         password: ''
       },
       rules: {
-        userName: [{
+        username: [{
           required: true,
           message: '账号不能为空',
           trigger: 'blur'
@@ -66,9 +66,9 @@ export default {
           Server.login(this.form).then((res) => {
             if (res.data.success) {
               this.errorMsg = ''
-              Cookies.set('user', this.form.userName)
+              Cookies.set('user', this.form.username)
               Cookies.set('password', this.form.password)
-              if (this.form.userName === 'admin') {
+              if (this.form.username === 'admin') {
                 Cookies.set('access', 0)
               } else {
                 Cookies.set('access', 1)
