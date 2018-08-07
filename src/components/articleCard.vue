@@ -11,6 +11,7 @@
       </div>
       <div class="article-item-recommend">
         <p class="paragraph">
+
          {{ article.reason }}
         </p>
       </div>
